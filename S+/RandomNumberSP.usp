@@ -1,0 +1,24 @@
+//#INCLUDEPATH "pathTobinDebugFolder"
+#USER_SIMPLSHARP_LIBRARY "RandomNumber"
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+#ENCODING_ASCII
+//#ENCODING_UTF16
+
+digital_Input getRandom;
+string_input minNum[32],maxNum[32];
+string_output sNumber;
+
+MyRandom _MyRandom;
+
+signed_Long_Integer Number;
+
+push getRandom
+{
+    Number = _MyRandom.GetRand(atol(minNum), atol(maxNum));
+	sNumber = ltoa(Number);
+}
+function main()
+{
+}
